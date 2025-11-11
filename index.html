@@ -7,80 +7,72 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   
   <header>
-    <div class="logo">Gul Muhammad Shaikh</div>
-    <nav id="navbar">
-      <ul>
+    <nav class="navbar">
+      <h1 class="logo">Gul Muhammad Shaikh</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
     </nav>
   </header>
 
-  
-  <section id="about" class="section">
+  <section id="home" class="hero">
+    <h2>Welcome to My Portfolio</h2>
+    <p>I’m a passionate web developer skilled in HTML, CSS, JavaScript, and WordPress.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </section>
+
+  <section id="about">
     <h2>About Me</h2>
-    <p>Hi! I’m Gul Muhammad Shaikh, a passionate Software Engineering student at Aptech, learning to build creative, responsive, and dynamic websites using HTML, CSS, JavaScript, and Laravel. I love turning ideas into interactive web experiences.</p>
+    <p>I love creating responsive, modern, and visually engaging websites. I aim to deliver simple yet impactful designs.</p>
   </section>
 
-  
-  <section id="services" class="section">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="card">
+  <section id="services">
+    <h2>My Services</h2>
+    <div class="service-boxes">
+      <div class="service">
+        <img src="Pictures/web design.jpg" alt="Web Design" class="service-img">
         <h3>Web Design</h3>
-        <p>Creating clean and modern website layouts using HTML and CSS.</p>
+        <p>Modern and user-friendly designs built with clean layouts.</p>
       </div>
-      <div class="card">
+
+      <div class="service">
+        <img src="Pictures/web development.jpg" alt="Web Development" class="service-img">
         <h3>Web Development</h3>
-        <p>Building functional websites with HTML, CSS, and JavaScript.</p>
+        <p>Developing responsive and dynamic websites using latest technologies.</p>
       </div>
-      <div class="card">
-        <h3>Responsive Design</h3>
-        <p>Making websites look great on all devices — desktop to mobile.</p>
+
+      <div class="service">
+        <img src="Pictures/wordpress website.jpg" alt="WordPress" class="service-img">
+        <h3>WordPress</h3>
+        <p>Custom WordPress themes and site management for businesses.</p>
       </div>
     </div>
   </section>
 
-  
-  <section id="portfolio" class="section">
-    <h2>My Projects</h2>
-    <div class="portfolio-container">
-      <div class="project-card">
-        <img src="Pictures/portfolio (2).jpg" alt="Project 1">
-        <h3>Personal Portfolio</h3>
-        <p>A responsive portfolio website built with HTML, CSS, and JavaScript.</p>
-      </div>
-      <div class="project-card">
-        <img src="Pictures/blog (2).jpg" alt="Project 2">
-        <h3>Laravel Blog</h3>
-        <p>A blog web app built using the Laravel framework and MySQL.</p>
-      </div>
-      <div class="project-card">
-        <img src="Pictures/wordpress website.jpg" alt="Project 3">
-        <h3>WordPress Website</h3>
-        <p>A custom WordPress website designed for a small business.</p>
-      </div>
-    </div>
-  </section>
-
-  
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:gulnisarshaikh@gmail.com">gulnisarshaikh@gmail.com</a></p>
-
-    <p>Phone: +92-304-2681062</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
 
-  
-  <footer>
+   <footer>
     <p>© 2025 Gul Muhammad Shaikh | All Rights Reserved</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
+      <a href="https://github.com/GulMuhammad-shaikh" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/gul-muhammad-53a602356/" target="_blank">LinkedIn</a>
+    </div>
   </footer>
+
 
   <script src="script.js"></script>
 </body>

@@ -1,145 +1,193 @@
 
-* {
+body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 
-header {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  background-color: #111;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: #111;
+  padding: 15px 40px;
 }
 
-.logo {
+.navbar .logo {
+  color: #fff;
   font-size: 22px;
-  font-weight: bold;
 }
 
-nav ul {
-  display: flex;
+.nav-links {
   list-style: none;
+  display: flex;
   gap: 20px;
 }
 
-nav ul li a {
+.nav-links a {
   text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s;
+  color: #fff;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
   color: #00bcd4;
 }
 
 
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(120deg, #00bcd4, #007bff);
+  color: white;
+}
+
+.hero .btn {
+  background: white;
+  color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #007bff;
+  color: white;
 }
 
 
-.section {
-  padding: 60px 50px;
+#about {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+
+#services {
+  background: #f5f5f5;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.section h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: #111;
-}
-
-.section p {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-  color: #444;
-}
-
-
-.services {
+.service-boxes {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
+  padding-top: 20px;
 }
 
-.card {
-  background: #f5f5f5;
-  padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-
-.portfolio-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.project-card {
+.service {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
   width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+
+
+.service-img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.service h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #007bff;
+}
+
+.service p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+#contact {
+  text-align: center;
+  padding: 60px 20px;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s;
 }
 
-.project-card:hover {
-  transform: scale(1.05);
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 15px;
 }
 
-.project-card img {
-  width: 100%;
-  height: auto;
+form input, form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #0056b3;
 }
 
 
 footer {
-  background-color: #111;
-  color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+}
+
+.social-links a {
+  color: #00bcd4;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
 }
 
 
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
+  .nav-links {
     flex-direction: column;
-    background: #111;
-    width: 100%;
+    text-align: center;
   }
 
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .services, .portfolio-container {
+  .service-boxes {
     flex-direction: column;
     align-items: center;
+  }
+
+  .service {
+    width: 80%;
+  }
+
+  .hero {
+    padding: 60px 20px;
   }
 }
